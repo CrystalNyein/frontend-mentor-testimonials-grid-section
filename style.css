@@ -10,3 +10,97 @@ html {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--light-grayish-blue);
+  min-height: 100vh;
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  width: 80vw;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+.card {
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+.card.dark {
+  color: var(--light-grayish-blue);
+}
+.card.light {
+  color: var(--very-dark-grayish-blue);
+}
+.card-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-profile img {
+  width: 3rem;
+  border-radius: 50%;
+}
+.profile-text {
+  margin-left: 1.5rem;
+}
+.profile-text h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.profile-text p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  opacity: 50%;
+}
+.card .main-review {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.card .sub-review {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 70%;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+}
+.daniel-card {
+  grid-area: daniel;
+  background-color: var(--moderate-violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+}
+.daniel-card img,
+.patrick-card img {
+  border: 2px solid hsl(263, 73%, 64%);
+}
+.jonathan-card {
+  grid-area: jonathan;
+  background-color: var(--very-dark-grayish-blue);
+}
+.jonathan-card img {
+  border: 2px solid hsl(215, 13%, 55%);
+}
+.kira-card {
+  grid-area: kira;
+  background-color: var(--white);
+}
+.jeanette-card {
+  grid-area: jeanette;
+  background-color: var(--white);
+}
+.kira-card img,
+.jeanette-card img {
+  border: 2px solid var(--white);
+}
+.patrick-card {
+  grid-area: patrick;
+  background-color: var(--very-dark-blackish-blue);
+}
